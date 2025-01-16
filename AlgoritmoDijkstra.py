@@ -68,8 +68,7 @@ class Grafo:
             nodoActual = self.nodos[nodoActual].nodoAnterior
         return f"El camino a seguir es: {ruta}\nEl costo es: {self.nodos[nodoFinal].distancia}"
 
-
-class main:
+def main():
     grafo = Grafo()
     #nodos = ['O', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'T']
     #aristas = [['O', 'C', 7], ['O', 'B', 7], ['O', 'A', 6], ['C', 'B', 1], ['C', 'E', 3], ['B', 'E', 4], ['B', 'D', 3], ['B', 'A', 2], ['A', 'D', 4], ['E', 'F', 5], ['E', 'G', 9], ['E', 'D', 3], ['D', 'G', 6], ['D', 'H', 4], ['F', 'T', 6], ['F', 'G', 2], ['G', 'T', 7], ['G', 'H', 1], ['H', 'T', 6]]
@@ -81,3 +80,6 @@ class main:
         grafo.agregarArista(arista[0], arista[1], arista[2])
     grafo.ejecutarDijkstra('A')
     print(grafo.ruta('J'))
+
+if __name_ == '__main__':
+    main()
